@@ -67,24 +67,24 @@ const ProductsList = ({product, detail}) => {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <Box sx={style}>
-                        <div className={"w-[900px] max-lg:w-[750px] max-md:w-[300px]"}>
-                            <div className={" bg-grey p-6 text-[16px] font-[500] flex justify-between "}>
+
+                    <Box sx={style} style={{borderRadius:"10px"}}>
+                        <div className={"w-[900px] max-lg:w-[750px] max-md:w-[300px] p-[2px]  "}>
+                            <div className={" bg-grey p-6 text-[16px] font-[500] flex justify-between  "}>
                                 <h2 className={"w-[150px]"}>Product details</h2>
                                 <div className={"flex"}>
-                                    <StarRateIcon color={"warning"}/>
-                                    <span
-                                        className={"text-grey font-[400]"}>{product.rating.rate ? product.rating.rate : ''}</span>
+                                    <StarRateIcon style={{color:"#F9B618"}}/>
+                                    <span className={"text-grey font-[400]"}>{product.rating.rate ? product.rating.rate : ''}</span>
                                 </div>
                             </div>
                             <div onClick={handleOpen}
                                  className={"flex justify-around max-md:flex-col max-md:p-3 p-3 py-10 px-10 rounded-[10px] items-start"}>
-                                <img className={"w-[360px] h-full max-h-[257px] mr-3 max-md:mr-0"}
+                                <img className={"w-[360px] max-md:w-[273px] max-md:h-[210px] h-full max-h-[257px] mr-4 max-md:mr-0"}
                                      src={product.image} alt=""/>
                                 <div className={"w-full max-w-[367px]"}>
-                                    <h2 className={"text-[16px] font-medium leading-5 max-md:p-2 mb-5 max-md:mb-1.5 "}>{product.title}</h2>
-                                    <h3 className={"text-[14px] font-thin text-gray-400 max-md:px-2 leading-4 "}>{product.description}</h3>
-                                    <div className={"flex justify-between w-full items-center my-10"}>
+                                    <h2 className={"text-[16px]  max-md:text-[14px] font-medium leading-5 mb-5 max-md:my-3 "}>{product.title}</h2>
+                                    <h3 className={"text-[14px] font-thin text-gray-400 leading-4 "}>{product.description}</h3>
+                                    <div className={"flex justify-between w-full items-center my-10 max-md:my-5"}>
                                         <p className={"text-[16px] font-bold"}>{`${product.price}$`}</p>
                                         <span onClick={addToCart}
                                               className={"bg-purple rounded-[5px] p-1.5 px-7 text-white text-[16px] cursor-pointer"}><LocalMallOutlinedIcon
