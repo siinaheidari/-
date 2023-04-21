@@ -17,7 +17,7 @@ function App() {
                 <CartProvider>
                     <BrowserRouter>
                         <Routes>
-                            <Route path={"/"} element={<Login/>}/>
+                            <Route path={"/*"} element={<Login/>}/>
                             <Route path={"/product"} element={<Products/>}/>
                             <Route path={"/product/:id"} element={<Products/>}/>
                             <Route path={"/cart"} element={<Cart/>}/>
