@@ -18,7 +18,7 @@ const Header = ({filterProducts}) => {
 
     return (
         <div
-            className={"flex text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1200px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
+            className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1130px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
             <div className={"hidden max-md:flex"}>
                 <ReorderIcon style={{color: "white" , fontSize:"30px"}} onClick={handleOpen}/>
             </div>
@@ -28,7 +28,7 @@ const Header = ({filterProducts}) => {
                     <img className={"w-[110px] h-[22px] "} src="/images/vector.png" alt=""/>
                 </div>
             </Link>
-            <div className={open ? " flex-col bg-gradient-to-r from-blue to-purple absolute top-[4rem] left-0 w-full h-[30%] z-10" : " flex justify-between w-full max-w-[350px] max-md:mt-3 max-md:hidden"}>
+            <div className={open ? " flex-col bg-gradient-to-r from-blue to-purple absolute top-[4rem] left-0 w-full  h-[30%] z-10" : " flex justify-between w-full max-w-[350px] max-md:mt-3 max-md:hidden"}>
                 <div className={"my-5 max-md:text-white "}>
                     <button onClick={() => filterProducts("electronics")} className={"hover:text-red-600 focus:text-red-600 font-[500] text-header"}>electronics</button>
                 </div>

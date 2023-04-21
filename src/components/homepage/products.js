@@ -71,7 +71,7 @@ const Products = () => {
                             className={"text-[16px] leading-[19px] mx-8 max-md:mx-2 font-[500] focus:text-purple-700"}>descending<SouthIcon
                         style={{fontSize: "14px"}}/></button>
                 </div>
-                <div className={"flex flex-wrap justify-between  max-md:flex-nowrap overflow-x-auto "}>
+                <div className={"flex flex-wrap justify-between my-4 max-md:flex-nowrap overflow-x-auto "}>
                     {filter.length > 0 ?
                         filter.map((product) => {
                             return <ProductsList key={product.id} product={product} detail={detail}/>
