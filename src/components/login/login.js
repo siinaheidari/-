@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import "../App.css"
+import "../../App.css"
 import axios from "axios";
 import * as yup from "yup"
 import {useNavigate} from "react-router-dom";
@@ -51,8 +51,8 @@ const Login = () => {
                     </div>
                     <div className={"text-center"}>
                         <div className={"flex justify-center items-center my-3"}>
-                            <img className={"w-[37.12px] h-[38.39px] mr-2"} src="/images/group 2.png" alt=""/>
-                            <img className={"w-[110px] h-[22px] "} src="/images/vector.png" alt=""/>
+                            <img className={"w-[37.12px] h-[38.39px] mr-2"} src="/images/Group 2.png" alt=""/>
+                            <img className={"w-[110px] h-[22px] "} src="/images/Vector.png" alt=""/>
                         </div>
                         <h1 className={"text-[24px] text-purple font-[800]"}>Welcome back</h1>
                         <p className={"w-[332px] text-[12px] font-[400] text-gray-400 my-6 max-md:px-8"}>A Lorem Ipsum

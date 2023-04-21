@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {CartContext, ProductsContext} from "../context";
+import {CartContext, ProductsContext} from "../context/context";
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import {Link} from "react-router-dom";

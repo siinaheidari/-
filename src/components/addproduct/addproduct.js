@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import Header from "../header/header";
-import {ProductsContext} from "../context";
+import {ProductsContext} from "../context/context";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import Modal from "@mui/material/Modal";

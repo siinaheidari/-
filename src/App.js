@@ -1,11 +1,11 @@
 import './App.css';
-import {CartProvider, ProductsProvider} from "./components/context";
+import {CartProvider, ProductsProvider} from "./components/context/context";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Products from "./components/homepage/products";
 import Header from "./components/header/header";
 import Cart from "./components/cart/cart";
 import AddProduct from "./components/addproduct/addproduct";
-import Login from "./login/login";
+import Login from "./components/login/login";
 import Payment from "./components/payment/payment";
 
 

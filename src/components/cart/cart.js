@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import {CartContext} from "../context";
+import {CartContext} from "../context/context";
 import CartList from "./cartlist";
 import Header from "../header/header";
 

@@ -46,7 +46,7 @@ const CartList = ({carts, setCarts}) => {
     }, 0)
 
     const totalLoan = carts.reduce((prevValue, currValue) => {
-        return prevValue + currValue.price * radioValue / 100
+        return prevValue + currValue.price * currValue.quantity * radioValue / 100
     }, 0)
 
     return (

@@ -4,7 +4,7 @@ import Rating from '@mui/material/Rating';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import {Link} from "react-router-dom";
-import {CartContext} from "../context";
+import {CartContext} from "../context/context";
 import StarRateIcon from '@mui/icons-material/StarRate';
 
 

@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
-import {ProductsContext} from "../context";
+import {ProductsContext} from "../context/context";
 import axios from "axios";
 import ProductsList from "./productslist";
 import FormatLineSpacingIcon from '@mui/icons-material/FormatLineSpacing';
