@@ -10,18 +10,25 @@ import Header from "../header/header";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import ClipLoader from "react-spinners/ClipLoader";
+import {BounceLoader, GridLoader, HashLoader, RotateLoader} from "react-spinners";
 
 const Products = () => {
     const {id} = useParams();
     const [products, setProducts] = useContext(ProductsContext);
+    const [loading, setLoading] = useState(false);
     const [detail, setDetail] = useState([]);
     const [filter, setFilter] = useState(products);
 
     useEffect(() => {
+        setLoading(true)
         axios.get("https://fakestoreapi.com/products")
             .then(res => {
-                setProducts(res.data)
-                setFilter(res.data);
+                setTimeout(()=>{
+                    setProducts(res.data)
+                    setFilter(res.data);
+                    setLoading(false)
+                },1500)
                 console.log(res.data)
             }).catch(err => {
             console.log(err)
@@ -40,7 +47,7 @@ const Products = () => {
 
     const filterProducts = (category) => {
         const updateList = [...products].filter((product) => product.category === category);
-        setFilter(updateList);
+        setProducts(updateList);
     }
     const handleDescending = () => {
         const sorted = [...products].sort((low, high) => low.price - high.price)
@@ -53,6 +60,13 @@ const Products = () => {
         })
         setFilter(sorted)
     }
+
+
+    const override: CSSProperties = {
+        display: "block",
+        margin: "10rem auto",
+        borderColor: " purple",
+    };
 
     return (
         <div className={"relative h-[100vh]"}>
@@ -71,11 +85,18 @@ const Products = () => {
                             className={"text-[16px] leading-[19px] mx-8 max-md:mx-2 font-[500] focus:text-purple-700"}>descending<SouthIcon
                         style={{fontSize: "14px"}}/></button>
                 </div>
-                <div className={"flex flex-wrap justify-between my-4 max-md:flex-nowrap overflow-x-auto "}>
-                    {filter.length > 0 ?
+                <div className={"flex flex-wrap justify-between my-4 max-md:flex-nowrap max-w:-overflow-x-auto "}>
+                    {!loading && filter.length > 0 ?
                         filter.map((product) => {
                             return <ProductsList key={product.id} product={product} detail={detail}/>
-                        }) : <h1>Nothing Found</h1>
+                        }) :<GridLoader
+                            color=" #36d7b7"
+                            loading={loading}
+                            cssOverride={override}
+                            size={18}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
                     }
                 </div>
             </div>

@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@hookform/resolvers": "^2.9.10",
     "@mui/icons-material": "^5.11.16",
     "@mui/lab": "^5.0.0-alpha.127",
     "@mui/material": "^5.12.1",
@@ -16,13 +17,14 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.8",
     "sweetalert2": "^11.7.3",
     "tw-elements": "^1.0.0-beta2",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11",
-    "@hookform/resolvers": "^2.9.10"
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",

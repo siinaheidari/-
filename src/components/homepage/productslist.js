@@ -33,7 +33,7 @@ const ProductsList = ({product, detail}) => {
         <>
             <Link to={`/product/${product.id}`}>
                 <div onClick={handleOpen}
-                     className={"flex-col w-[264px] h-[410px] max-md:w-[150px] max-md:h-[265px] p-3 max-md:p-1.5 shadow-lg m-1 rounded-[10px] items-center relative"}>
+                     className={"flex-col w-[264px] h-[410px] max-md:w-[150px] max-md:h-[265px] transition ease-in-out delay-200 hover:scale-105 p-3 max-md:p-1.5 shadow-lg m-1 rounded-[10px] items-center relative"}>
                     <img className={"w-[248px] max-md:w-[136px] max-md:h-[115px] my-1.5 h-[200px] "} src={product.image}
                          alt=""/>
                     <div>
