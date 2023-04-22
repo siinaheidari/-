@@ -163,8 +163,9 @@ const CartList = ({carts, setCarts}) => {
                                 <div className={"w-[90px] mr-4 relative "}>
                                     <p className={"text-[15px] font-[500] text-orange-500 absolute right-[5rem]"}>{(totalLoan).toFixed(2)}$</p>
                                     <CircularProgressbar className={"progress"}
+
                                                          value={totalPrice}
-                                                         value={(totalLoan)}
+                                                         value={totalLoan}
                                                          text={`${(totalPrice).toFixed(1)}$`}
                                                          background={true}
                                                          strokeWidth={11}
