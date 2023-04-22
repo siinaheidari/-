@@ -30,16 +30,16 @@ const Header = ({filterProducts}) => {
             </Link>
             <div className={open ? " flex-col bg-gradient-to-r from-blue to-purple absolute top-[4rem] left-0 w-full  h-[30%] z-10" : " flex justify-between w-full max-w-[350px] max-md:mt-3 max-md:hidden"}>
                 <div className={"my-5 max-md:text-white "}>
-                    <button onClick={() => filterProducts("electronics")} className={"hover:text-red-600 focus:text-red-600 font-[500] text-header"}>electronics</button>
+                    <button onClick={() => filterProducts("electronics")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>electronics</button>
                 </div>
                 <div className={"my-5 max-md:text-white "}>
-                    <button onClick={() => filterProducts("women's clothing")} className={"hover:text-red-600 focus:text-red-600 font-[500] text-header"}>women</button>
+                    <button onClick={() => filterProducts("women's clothing")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>women</button>
                 </div>
                 <div className={"my-5 max-md:text-white "}>
-                    <button onClick={() => filterProducts("men's clothing")} className={"hover:text-red-600 focus:text-red-600 font-[500] text-header"}>mens</button>
+                    <button onClick={() => filterProducts("men's clothing")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>mens</button>
                 </div>
                 <div className={"my-5 max-md:text-white "}>
-                    <button onClick={() => filterProducts("jewelery")} className={"hover:text-red-600 focus:text-red-600 font-[500] text-header"}>jewelery</button>
+                    <button onClick={() => filterProducts("jewelery")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>jewelery</button>
                 </div>
                 <Link to={"/addproduct"}>
                     <span
