@@ -17,13 +17,21 @@ const Login = () => {
         resolver: yupResolver(schema)
     })
 
-    const submitForm = (data) => {
+    const submitForm = () => {
         console.log(submitForm)
+        axios.post("https://fakestoreapi.com/auth/login",register).then(response => {
+        }).catch(err => {
+            console.log(err)
+            navigate("/product")
+        })
         navigate("/product")
     }
+
+
+    //////////////////روش دوم/////////////////
+
     // const [username, setUsername] = useState("");
     // const [password, setPassword] = useState("");
-
 
     // const handleSubmit = (e) => {
     //     e.preventDefault();
@@ -41,6 +49,9 @@ const Login = () => {
     //         return;
     //     }
     // }
+
+    ////////////////////////////////////////////////////
+
     return (
         <div className={"background"}>
             <div className={"background2 py-[12rem] px-[2rem] max-md:p-7"}>

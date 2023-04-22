@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import Header from "../header/header";
 import * as yup from "yup"
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {useForm} from "react-hook-form";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import {PaymentOutlined} from "@mui/icons-material";
 import CheckPayment from "./checkpayment";
 
 const Payment = () => {
