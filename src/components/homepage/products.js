@@ -65,7 +65,7 @@ const Products = () => {
     const override = {
         display: "block",
         margin: "10rem auto",
-        borderColor: " purple",
+        borderColor: " #6F11E1",
     };
 
     return (
@@ -90,10 +90,10 @@ const Products = () => {
                         filter.map((product) => {
                             return <ProductsList key={product.id} product={product} detail={detail}/>
                         }) :<GridLoader
-                            color=" #36d7b7"
+                            color="#6F11E1"
                             loading={loading}
                             cssOverride={override}
-                            size={18}
+                            size={15}
                             aria-label="Loading Spinner"
                             data-testid="loader"
                         />
