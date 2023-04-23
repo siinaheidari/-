@@ -74,7 +74,7 @@ const Products = () => {
             <div className={"w-[full] m-auto max-md:p-6 flex justify-center "}>
                 <img className={"max-md:h-[160px] border rounded-lg bg-payment "} src={"/images/banner.png"} alt=""/>
             </div>
-            <div className={"w-full max-w-[1150px] m-auto p-2 my-7 max-md:my-1 max-md:text-[14px] "}>
+            <div className={"w-full max-w-[1151px] m-auto p-2 my-7 max-md:my-1 max-md:text-[14px] "}>
                 <div className={"flex flex-wrap justify-start border-b-2 py-2 max-md:justify-center"}>
                     <span
                         className={"text-[16px] leading-[19px] mx-1.5 font-[500]"}><FormatLineSpacingIcon/>Sorting:</span>

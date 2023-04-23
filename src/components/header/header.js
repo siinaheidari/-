@@ -17,7 +17,7 @@ const Header = ({filterProducts}) => {
 
 
     return (
-        <div className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1150px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
+        <div className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1151px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
             <div className={"hidden max-md:flex"} onClick={handleOpen}>
                 {
                     !open? <ReorderIcon style={{color: "white" , fontSize:"30px"}} />
@@ -45,7 +45,7 @@ const Header = ({filterProducts}) => {
                 </div>
                 <Link to={"/addproduct"}>
                     <span
-                        className={"bg-purple  rounded-[7px] p-2.5 pr-2 text-white text-[16px]  hidden max-md:block "}><ControlPointIcon
+                        className={"bg-purple rounded-[7px] p-2.5 pr-2 text-white text-[16px]  hidden max-md:block "}><ControlPointIcon
                         style={{
                             color: "white",
                             fontSize: "25px",
