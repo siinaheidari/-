@@ -4,7 +4,7 @@ import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import {Link} from "react-router-dom";
 import ReorderIcon from '@mui/icons-material/Reorder';
-
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Header = ({filterProducts}) => {
     const [cart, setCart] = useContext(CartContext);
@@ -17,10 +17,12 @@ const Header = ({filterProducts}) => {
 
 
     return (
-        <div
-            className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1132px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
-            <div className={"hidden max-md:flex"}>
-                <ReorderIcon style={{color: "white" , fontSize:"30px"}} onClick={handleOpen}/>
+        <div className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1132px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
+            <div className={"hidden max-md:flex"} onClick={handleOpen}>
+                {
+                    !open? <ReorderIcon style={{color: "white" , fontSize:"30px"}} />
+                        : <ClearIcon style={{color: "white" , fontSize:"30px"}} />
+                }
             </div>
             <Link to={"/product"}>
                 <div className={"flex items-center text-center"}>
@@ -29,16 +31,16 @@ const Header = ({filterProducts}) => {
                 </div>
             </Link>
             <div className={open ? " flex-col bg-gradient-to-r from-blue to-purple absolute top-[4rem] left-0 w-full  h-[30%] z-10" : " flex justify-between w-full max-w-[350px] max-md:mt-3 max-md:hidden"}>
-                <div onClick={handleOpen} className={"my-5 max-md:text-white  "}>
+                <div  className={"my-5 max-md:text-white  "}>
                     <button onClick={() => filterProducts("electronics")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>electronics</button>
                 </div>
                 <div className={"my-5 max-md:text-white "}>
                     <button onClick={() => filterProducts("women's clothing")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>women</button>
                 </div>
-                <div onClick={handleOpen} className={"my-5 max-md:text-white "}>
+                <div className={"my-5 max-md:text-white "}>
                     <button onClick={() => filterProducts("men's clothing")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>mens</button>
                 </div>
-                <div onClick={handleOpen} className={"my-5 max-md:text-white "}>
+                <div className={"my-5 max-md:text-white "}>
                     <button onClick={() => filterProducts("jewelery")} className={"hover:text-purple focus:text-purple font-[500] text-header"}>jewelery</button>
                 </div>
                 <Link to={"/addproduct"}>
