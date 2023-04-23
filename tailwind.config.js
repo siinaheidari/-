@@ -15,7 +15,8 @@ module.exports = {
       colors:{
         "blue":"#0021CE",
         "purple":"#6F11E1",
-        "payment":"#1BAC03"
+        "payment":"#1BAC03",
+        "grey":"#E4E4E4",
       },
       fontFamily:{
 "inter":'Inter',
