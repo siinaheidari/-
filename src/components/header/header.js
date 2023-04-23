@@ -18,7 +18,7 @@ const Header = ({filterProducts}) => {
 
     return (
         <div
-            className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1130px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
+            className={"flex text-[17px] text-center items-center justify-between px-3 py-6 max-md:py-4 max-md:-border rounded-md w-full max-w-[1132px] m-auto max-md:bg-gradient-to-r from-blue to-purple "}>
             <div className={"hidden max-md:flex"}>
                 <ReorderIcon style={{color: "white" , fontSize:"30px"}} onClick={handleOpen}/>
             </div>
