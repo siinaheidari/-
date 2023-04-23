@@ -49,7 +49,7 @@ const CartList = ({carts, setCarts}) => {
 
     return (
         <div className={"flex justify-between items-center text-center w-full max-w-[1200px] m-auto max-md:flex-col"}>
-            <div className={"mr-4 w-full max-w-[732px] text-center items-center"}>
+            <div className={"mr-4 w-full max-w-[732px] m-auto text-center items-center"}>
                 <div
                     className={"flex justify-between items-center p-5 bg-grey text-[16px] font-[500] border rounded-lg shadow-md"}>
                     <p className={"w-[123px] "}>Product details</p>
@@ -58,21 +58,22 @@ const CartList = ({carts, setCarts}) => {
                     <p className={"w-[50px] max-md:hidden"}>total</p>
                 </div>
                 {carts.map((cart, index) => {
-                    return <div key={cart.id}
-                        className={"bg-border flex justify-between p-5 text-[16px] font-[500] max-md:flex-col max-md:justify-center items-center "}>
+                    return <div key={cart.id} className={"bg-border flex justify-between p-5 text-[16px] font-[500] max-md:flex-col max-md:justify-center items-center "}>
                         <div>
                             <p className={"hidden"}>Product details</p>
-                            <img src={cart.image} alt={""} className={"w-[123px] h-[100px] mr-2"}/>
-                            <div className={"flex text-center items-center justify-center my-4"}>
-                                <button onClick={() => {
-                                    incrementItem(cart.id)
-                                }}
-                                        className={"w-[25px] bg-orange rounded-full text-white text-[17px] cursor-pointer"}>-
-                                </button>
-                                <p className={"w-[60px] bg-white mx-1.5 py-1 border-2 rounded-lg"}>{cart.quantity}</p>
-                                <button onClick={() => decrementItem(cart.id)}
-                                        className={"w-[25px] bg-orange rounded-full text-white text-[17px] cursor-pointer"}>+
-                                </button>
+                            <div className={" max-md:flex justify-between "}>
+                                <img src={cart.image} alt={""} className={"w-[130px] h-[105px] mr-2"}/>
+                                <div className={"flex text-center items-center justify-center my-4 max-md:w-[200px] "}>
+                                    <button onClick={() => {
+                                        incrementItem(cart.id)
+                                    }}
+                                            className={"w-[25px] bg-orange rounded-full text-white text-[17px] cursor-pointer"}>-
+                                    </button>
+                                    <p className={"w-[60px] bg-white mx-1.5 py-1 border-2 rounded-lg"}>{cart.quantity}</p>
+                                    <button onClick={() => decrementItem(cart.id)}
+                                            className={"w-[25px] bg-orange rounded-full text-white text-[17px] cursor-pointer"}>+
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div
@@ -97,7 +98,6 @@ const CartList = ({carts, setCarts}) => {
 
 
             <div className={" w-full max-w-[358px] min-h-[300px] border rounded-lg bg-border shadow-md my-4"}>
-
                 <ul className=" flex list-none flex-row w-full bg-grey ">
                     <li className={"w-1/2 py-2 "}>
                         <button onClick={handleDetail1}

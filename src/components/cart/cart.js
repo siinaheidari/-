@@ -17,7 +17,6 @@ const Cart = () => {
             <div className={"w-full max-w-[1200px] m-auto p-5"}>
                 <p className={"text-[16px] font-[500] my-4"}>Shopping cart</p>
                 <CartList key={carts.id} carts={carts} setCarts={setCarts}/>
-
             </div>
 
         </div>
