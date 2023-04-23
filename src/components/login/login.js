@@ -22,7 +22,6 @@ const Login = () => {
         axios.post("https://fakestoreapi.com/auth/login",register).then(response => {
         }).catch(err => {
             console.log(err)
-
         })
         navigate("/product")
     }
