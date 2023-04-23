@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
-import Header from "../header/header";
-// import {Tab, initTE,} from "tw-elements";
+import React, {useContext, useState} from 'react';
 import CircleIcon from '@mui/icons-material/Circle';
 import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
-import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import {Link} from "react-router-dom";
 
 
 const CartList = ({carts, setCarts}) => {
-    // iniE({Tab});
+
     const [isLoan, setIsLoan] = useState(false);
     const [isOpen1, setIsOpen1] = useState(true);
     const [isOpen2, setIsOpen2] = useState(false);
-    // const [counter, setCounter] = useState(1);
     const [radioValue, setRadiovalue] = useState("");
+
 
     const handleLoan = () => {
         setIsLoan(!isLoan)
@@ -48,6 +45,7 @@ const CartList = ({carts, setCarts}) => {
     const totalLoan = carts.reduce((prevValue, currValue) => {
         return prevValue + currValue.price * currValue.quantity * radioValue / 100
     }, 0)
+
 
     return (
         <div className={"flex justify-between items-center text-center w-full max-w-[1200px] m-auto max-md:flex-col"}>
