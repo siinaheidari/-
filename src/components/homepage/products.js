@@ -47,7 +47,7 @@ const Products = () => {
 
     const filterProducts = (category) => {
         const updateList = [...products].filter((product) => product.category === category);
-        setProducts(updateList);
+        setFilter(updateList);
     }
     const handleDescending = () => {
         const sorted = [...products].sort((low, high) => low.price - high.price)
