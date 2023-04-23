@@ -14,11 +14,10 @@ const Payment = () => {
     const [cardNumber, setCardNumber] = useState("");
 
     const schema = yup.object().shape({
-        cardNumber: yup.number.min(16, " شماره کارت باید 16 رقم نیست").required(),
-        Cvv2: yup.number().min(3, " باید 3 رقم‌ یاشد").max(3).required(),
-        Year: yup.number().min(4, "تاریخ کارت صحیح نیست").max(4).required(),
-        Month: yup.number().min(2, "تاریخ کارت صحیح نیست").max(2).required(),
-        Epass: yup.number.min(4, "رمز کارت باید ۴ رقم یاشد").max(4).required(),
+        Cvv2: yup.string().min(3, " باید 3 رقم‌ یاشد").max(3).required(),
+        Year: yup.string().min(4, "تاریخ کارت صحیح نیست").max(4).required(),
+        Month: yup.string().min(2, "تاریخ کارت صحیح نیست").max(2).required(),
+        Epass: yup.string().min(4, "رمز کارت باید ۴ رقم یاشد").max(4).required(),
     });
 
     const {register, handleSubmit, formState: {errors}} = useForm({
